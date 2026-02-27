@@ -52,4 +52,4 @@ Green-Horizon/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Dev-Liss/Green-Horizon.git
+   git clone https://github.com/Rimy14/Green-Horizon.git
