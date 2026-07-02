@@ -16,9 +16,6 @@ The purpose of Green Horizon is to educate users about environmental issues and 
 - Informative environmental content pages
 - Volunteer registration page
 - Feedback form with input validation
-- Team introduction page
-- Sitemap for easy navigation
-- Individual student contribution pages
 
 ---
 
@@ -38,8 +35,6 @@ Green-Horizon/
 ├── Splash_Screen.html  
 ├── volunteer.html  
 ├── feedback.html  
-├── sitemap.html  
-├── team.html  
 │
 ├── css/  
 ├── js/  
