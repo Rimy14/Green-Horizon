@@ -31,6 +31,7 @@ body {
     padding: 0 20px;
     position: relative;
     z-index: 10;
+    box-sizing: border-box;
 }
 
 /* Two-column layout grid */
@@ -481,8 +482,19 @@ body {
 }
 
 @media (max-width: 768px) {
+    .profile-main-container {
+        padding: 0 12px;
+        margin-top: -60px; /* pull container closer to cover page overlay */
+    }
+
+    .profile-sidebar-card,
+    .profile-content-card {
+        padding: 20px 15px; /* compact padding to maximize mobile width */
+    }
+
     .profile-sidebar {
         flex-direction: column;
+        gap: 15px;
     }
     
     .profile-sidebar-card {
@@ -491,6 +503,7 @@ body {
     
     .boxes-container, .interests-grid {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
     
     .form-row {
