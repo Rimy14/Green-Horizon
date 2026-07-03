@@ -284,12 +284,13 @@ th {
     margin-right: 40px; /* Space between branding and other columns */
 }
 
-.footer-logo {
+.footer-logo, .footer-logo:hover, .footer-logo:focus, .footer-logo:active {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-bottom: 15px;
     cursor: pointer;
+    text-decoration: none !important; /* completely remove any default browser link underlines */
 }
 
 .footer-logo img {
