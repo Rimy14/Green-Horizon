@@ -1,0 +1,97 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4fbf7;
+    color: #333;
+    overflow-x: hidden; /* completely lock body from horizontal scroll */
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 80px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.role-table {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block; /* lock size to parent main container */
+    max-width: 100%; /* prevent overflow expansion */
+    width: 100%;
+    align-self: stretch; /* force full width inside flex container */
+    position: relative; 
+    overflow-x: auto; /* Enable horizontal scrolling on mobile */
+    -webkit-overflow-scrolling: touch; /* enable momentum touch swiping on iOS */
+    box-sizing: border-box;
+}
+
+.role-table table {
+    width: 100%;
+    min-width: 650px; /* Guarantees legibility and triggers scroll container on mobile */
+    border-collapse: collapse;
+}
+
+/* Column Styling */
+.basic {
+    background: #d4edda;
+}
+
+.advanced {
+    background: #c3e6cb;
+}
+
+.ultimate {
+    background: #a5d6a7;
+}
+
+/* Specific heading text colors for high readability */
+th.basic, th.advanced, th.ultimate {
+    color: #1a4d1a !important; /* deep forest green for high contrast */
+    font-weight: 700;
+}
+
+th img{
+    width: 45px;
+    height: 45px;
+}
+
+/* Tick & Cross Icons */
+td img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(even) {
+    background-color: #f1f8e9;
+}
+
+/* Hover Effect */
+tbody tr:hover {
+    background-color: #dcedc8;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+        margin-top: 80px;
+    }
+    .role-table {
+        padding: 15px 10px;
+    }
+    .role-table h2 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+}

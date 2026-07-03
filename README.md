@@ -1,50 +1,16 @@
-# 🌍 Green Horizon
+# React + Vite
 
-Green Horizon is a responsive environmental awareness website developed to promote sustainable living and eco-friendly initiatives. This project was created as a collaborative academic assignment to demonstrate front-end development skills, responsive design, and user interaction using core web technologies.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
----
+Currently, two official plugins are available:
 
-## 🌿 Project Overview
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-The purpose of Green Horizon is to educate users about environmental issues and encourage them to take action. The platform combines informative content with interactive features such as volunteer registration and user feedback.
+## React Compiler
 
----
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🚀 Features
+## Expanding the Oxlint configuration
 
-- Interactive splash screen
-- Informative environmental content pages
-- Volunteer registration page
-- Feedback form with input validation
-
----
-
-## 🛠️ Technologies Used
-
-- **HTML5** – Semantic structure and content layout  
-- **CSS3** – Styling and responsive design  
-- **JavaScript** – Form validation and interactive functionality  
-
----
-
-## 📂 Project Structure
-
-Green-Horizon/
-│
-├── home.html  
-├── Splash_Screen.html  
-├── volunteer.html  
-├── feedback.html  
-│
-├── css/  
-├── js/  
-├── images/  
-└── Icons/  
-
----
-
-## 📖 How to Run the Project
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Rimy14/Green-Horizon.git
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.

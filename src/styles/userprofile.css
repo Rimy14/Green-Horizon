@@ -1,0 +1,517 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4fbf7;
+    color: #333;
+}
+
+/* Custom cover image and overlay */
+.profile-cover {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    background-image: url('/images/userprofileheader.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.cover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(44, 122, 44, 0.15), rgba(0, 0, 0, 0.45));
+}
+
+/* Page content wrapper overlaying header cover */
+.profile-main-container {
+    max-width: 1200px;
+    margin: -100px auto 60px auto; 
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+/* Two-column layout grid */
+.profile-layout {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* Sidebar Column */
+.profile-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.profile-sidebar-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid #eef2f5;
+}
+
+/* Sidebar Avatar Info */
+.main-info-card {
+    text-align: center;
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: -85px auto 15px auto; 
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.active-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 18px;
+    height: 18px;
+    background-color: #2c7a2c;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+}
+
+.main-info-card h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a4d1a;
+    margin: 10px 0 4px 0;
+}
+
+.role-title {
+    font-size: 0.95rem;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.sidebar-divider {
+    border: 0;
+    border-top: 1px solid #eef2f5;
+    margin-bottom: 20px;
+}
+
+.quick-details-list {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+}
+
+.quick-details-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+.quick-details-list li i {
+    color: #2c7a2c;
+    width: 20px;
+    font-size: 1.1rem;
+}
+
+.contact-number {
+    color: #2c7a2c;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.contact-number:hover {
+    color: #1e581e;
+    text-decoration: underline;
+}
+
+/* Availability Calendar Card */
+.availability-card h3, .progress-card h3 {
+    font-size: 1.15rem;
+    color: #1a4d1a;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.calendar-wrapper {
+    background-color: #f8fafc;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #edf2f7;
+}
+
+.calendar-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar-wrapper th {
+    background-color: #2c7a2c;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 8px 4px;
+    border: none;
+}
+
+.calendar-wrapper td {
+    padding: 12px 4px;
+    font-size: 0.85rem;
+    color: #475569;
+    font-weight: 600;
+    border: 1px solid #edf2f7;
+    text-align: center;
+}
+
+.availability-tip {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-top: 10px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Progress Goal Card */
+.progress-bar-container {
+    width: 100%;
+    height: 22px;
+    background-color: #f1f5f9;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    margin-top: 10px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(135deg, #2c7a2c, #4ad66d);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    border-radius: 20px;
+    transition: width 1s ease-in-out;
+}
+
+.progress-text {
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.progress-desc {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+/* Right Content Column Card styling */
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.profile-content-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid #eef2f5;
+}
+
+.profile-content-card h3 {
+    font-size: 1.3rem;
+    color: #1a4d1a;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #2c7a2c;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-me-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #475569;
+}
+
+/* Skills, Goals & Experience boxes container */
+.boxes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.box {
+    background: #f8fafc;
+    border: 1px solid #edf2f7;
+    padding: 24px;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(44, 122, 44, 0.08);
+    border-color: #2c7a2c;
+}
+
+.box-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    color: #2c7a2c;
+}
+
+.box-header i {
+    font-size: 1.2rem;
+}
+
+.box h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a4d1a;
+    margin: 0;
+}
+
+.box ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+}
+
+.box ul li {
+    font-size: 0.9rem;
+    color: #475569;
+    position: relative;
+    padding-left: 15px;
+}
+
+.box ul li::before {
+    content: "•";
+    color: #2c7a2c;
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+
+/* Volunteering activities list */
+.volunteering-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+}
+
+.volunteering-list li {
+    font-size: 1rem;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    background-color: #f4fbf7;
+    border-left: 4px solid #2c7a2c;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Interests Grid list */
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.interest-item {
+    text-align: center;
+}
+
+.interest-img-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* uniform responsive aspect ratio */
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background-color: #ffffff; /* blends seamlessly with drawing canvases */
+    border: 1px solid #eef2f5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.interest-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* prevents cropping of illustrations */
+    padding: 12px; /* soft padding to keep drawings neatly in the frame */
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+.interest-item:hover .interest-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.interest-item span {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+/* Profile Contact form design */
+.profile-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+.form-group input, .form-group textarea {
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: "Nunito Sans", sans-serif;
+    background-color: #f8fafc;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #2c7a2c;
+    box-shadow: 0 0 0 3px rgba(44, 122, 44, 0.12);
+    background-color: #ffffff;
+}
+
+.submit-contact-btn {
+    background: linear-gradient(135deg, #2c7a2c, #4ad66d);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(44, 122, 44, 0.15);
+    transition: all 0.25s ease;
+    align-self: flex-start;
+}
+
+.submit-contact-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #215c21, #3cbd5b);
+    box-shadow: 0 6px 18px rgba(44, 122, 44, 0.25);
+}
+
+.submit-contact-btn:active {
+    transform: translateY(0);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .profile-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .profile-sidebar-card {
+        flex: 1 1 calc(50% - 15px);
+        min-width: 280px;
+    }
+    
+    .avatar-wrapper {
+        margin-top: 0; 
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-main-container {
+        padding: 0 12px;
+        margin-top: -60px; /* pull container closer to cover page overlay */
+    }
+
+    .profile-sidebar-card,
+    .profile-content-card {
+        padding: 20px 15px; /* compact padding to maximize mobile width */
+    }
+
+    .profile-sidebar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .profile-sidebar-card {
+        width: 100%;
+    }
+    
+    .boxes-container, .interests-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .submit-contact-btn {
+        width: 100%;
+        align-self: stretch;
+    }
+}

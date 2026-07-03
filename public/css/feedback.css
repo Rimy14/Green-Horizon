@@ -1,0 +1,307 @@
+/* Background color and layout centering */
+body {
+    background-color: #f4fbf7;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 100px auto 40px auto; 
+    font-family: "Nunito Sans", sans-serif;
+}
+
+/* Styling for the feedback container card */
+.feedback-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eef2f5;
+    border-top: 4px solid #2c7a2c; /* top highlight bar for extra polish */
+    width: 100%;
+    max-width: 700px;
+    transition: transform 0.3s ease;
+}
+
+.feedback-card h2 {
+    color: #1a4d1a; 
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 6px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-align: left;
+}
+
+.feedback-subtitle {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.feedback-form-styled {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Form group and rows */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* styling for the form labels */
+.form-group > label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #475569;
+    display: block;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+/* styling for input fields, dropdowns and textarea */
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 48px; /* explicit height for perfect alignment */
+    padding: 0 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: "Nunito Sans", sans-serif;
+    background-color: #f8fafc;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: "Nunito Sans", sans-serif;
+    background-color: #f8fafc;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2c7a2c;
+    box-shadow: 0 0 0 3px rgba(44, 122, 44, 0.12);
+    background-color: #ffffff;
+}
+
+/* Custom modern radio buttons (Pill style) */
+.radio-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 2px;
+}
+
+.radio-label {
+    display: inline-flex !important; /* Force inline-flex alignment override */
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background-color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    transition: all 0.25s ease;
+    user-select: none;
+    color: #475569;
+}
+
+.radio-label:hover {
+    border-color: #2c7a2c;
+    background-color: #f4fbf7;
+}
+
+.radio-label input[type="radio"] {
+    accent-color: #2c7a2c;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.radio-label span {
+    line-height: 1;
+    display: inline-block;
+}
+
+/* Highlight style when radio is selected */
+.radio-label.selected {
+    background-color: #e8f5e9;
+    border-color: #2c7a2c;
+    color: #1a4d1a;
+    box-shadow: 0 2px 8px rgba(44, 122, 44, 0.08);
+}
+
+/* Emoji satisfaction selector styling */
+.rating-input-wrapper {
+    margin-top: 2px;
+}
+
+.emoji-buttons {
+    display: flex;
+    gap: 12px;
+    background: #f8faf9;
+    padding: 10px 15px;
+    border-radius: 12px;
+    width: fit-content;
+    border: 1px solid #edf2f0;
+}
+
+.emoji-btn {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 50%;
+    font-size: 1.6rem; 
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.emoji-btn:hover {
+    transform: scale(1.12) translateY(-2px);
+    border-color: #2c7a2c;
+    background-color: #f4fbf7;
+    box-shadow: 0 4px 10px rgba(44, 122, 44, 0.12);
+}
+
+.emoji-btn.selected {
+    border-color: #2c7a2c;
+    background-color: #e8f5e9;
+    box-shadow: 0 4px 12px rgba(44, 122, 44, 0.2);
+    transform: scale(1.08);
+}
+
+/* Placeholder font styling */
+::placeholder {
+    font-style: normal;
+    color: #94a3b8;
+}
+
+/* Styling Buttons container */
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* Submit and Reset Button Styling */
+.submit-btn {
+    background: linear-gradient(135deg, #2c7a2c, #4ad66d);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(44, 122, 44, 0.15);
+    transition: all 0.25s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-1px);
+    background: linear-gradient(135deg, #215c21, #3cbd5b);
+    box-shadow: 0 6px 15px rgba(44, 122, 44, 0.25);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.reset-btn {
+    background-color: #ffffff;
+    color: #64748b;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.reset-btn:hover {
+    background-color: #f8fafc;
+    color: #334155;
+    border-color: #94a3b8;
+}
+
+.reset-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    main {
+        padding: 20px 10px;
+        margin-top: 80px; /* pull container slightly closer under the 70px nav */
+    }
+    
+    .feedback-card {
+        padding: 30px 16px; /* smaller card padding to maximize usable content width */
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .buttons {
+        flex-direction: column-reverse;
+    }
+    
+    .submit-btn, .reset-btn {
+        width: 100%;
+    }
+
+    .emoji-buttons {
+        gap: 8px;
+        padding: 8px 10px;
+        width: 100%;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+    
+    .emoji-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+    }
+}

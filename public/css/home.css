@@ -1,0 +1,267 @@
+/* Background image container with premium overlay */
+.bg-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bg-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65)); /* Premium dark overlay for readability */
+    z-index: 1;
+}
+  
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+}
+  
+/* Content inside the background */
+.content {
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 64px;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+    margin: 0;
+}
+
+.content p {
+    font-size: 20px;
+    color: #f0fff1;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Modern Centered Explore Button */
+.button {
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 14px 32px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+  
+.button:hover {
+    background-color: #2c7a2c;
+    border-color: #2c7a2c;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(44, 122, 44, 0.45);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+
+/*content */
+.content-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(2, auto); /* Two rows */
+    gap: 40px;
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+/* Individual Content Box */
+.content-box {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Image */
+.content-box img {
+    width: 100%;
+    height: 250px; /* Fixed height for clean grid alignment */
+    object-fit: cover; /* Crops image cleanly */
+    display: block;
+}
+
+/* Text */
+.content-text {
+    padding: 15px 15px 45px 15px; /* Added large bottom padding to make space for the button */
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Read More Effect */
+.read-more {
+    position: absolute;
+    bottom: 12px;
+    right: 15px;
+    background: #2c7a2c; /* Theme-matching green */
+    color: white;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 6px;
+    opacity: 0;
+    box-shadow: 0 4px 10px rgba(44, 122, 44, 0.2);
+    transition: opacity 0.3s ease-in-out, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.read-more:hover {
+    background-color: #215c21;
+    transform: scale(1.05);
+}
+
+.content-box:hover .read-more {
+    opacity: 1;
+}
+
+/*cards */
+.card-container {
+    display: flex;
+    background: linear-gradient(to bottom, #102e33, #f4fbf7); 
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    padding: 80px 20px;
+    flex-wrap: wrap; 
+}
+
+/* Individual Cards */
+.card {
+    background: rgba(255, 255, 255, 0.75); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    width: 280px; 
+}
+
+/* Icon Styling */
+.card-icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Title */
+.card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #102e33;
+    font-weight: 700;
+}
+
+/* Description */
+.card p {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.5;
+}
+
+/* Hover Effect */
+.card:hover {
+    background: #2c7a2c; /* Green Shade */
+    color: white;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(44, 122, 44, 0.25);
+    border-color: #2c7a2c;
+}
+
+.card:hover h3,
+.card:hover p {
+    color: white;
+}
+
+.card:hover .card-icon img {
+    transform: scale(1.1);
+}
+
+.footer_image {
+    width: 100%;
+    text-align: center;
+    margin-bottom: -5px; 
+    color: #000000;
+}
+
+.footer_image img {
+    width: 100%;
+    display: block;
+}
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+    }
+    .read-more {
+        opacity: 1; /* display read more on mobile/tablet screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .content-container {
+        grid-template-columns: 1fr; /* Switch to 1 column on small screens */
+    }
+    .card-container {
+        grid-template-columns: 1fr; /* Switch to 1 column */
+    }
+
+}
