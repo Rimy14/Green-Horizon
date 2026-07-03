@@ -1,16 +1,78 @@
-# React + Vite
+# Green Horizon — React SPA
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Green Horizon is a modern, responsive Single Page Application (SPA) designed to promote awareness, sustainability, and biodiversity conservation on land. Built using **React**, **Vite**, and **React Router**, it offers rich educational resources, volunteer programs, role comparison matrices, user progress dashboards, and interactive feedback forms.
 
-Currently, two official plugins are available:
+Live Site: [https://greennhorizon.netlify.app/](https://greennhorizon.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **SPA Navigation**: Instant, smooth transitions between pages with active route indicators and zero page reloads (using React Router).
+*   **Aesthetic Responsive Layouts**: Fully responsive grids and containers tested across all devices (mobile, tablet, and desktop) with proper viewport alignment and margins.
+*   **Dynamic CSS Scoping**: Prevents class collisions and style bleeding across pages by dynamically mounting and unmounting page-specific stylesheets as you navigate.
+*   **Interactive Components**:
+    *   **Volunteer Feedback**: Custom satisfactions rating emojis and state validations.
+    *   **Interactive Forms**: Complete field validation (email syntax, 10-digit phone, and radio highlight controls).
+    *   **Goal Tracker**: Dynamic progress indicator in the user dashboard.
+    *   **Go To Top Button**: Intelligently visible on scrolling with smooth velocity transitions.
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 📂 Project Structure
+
+```bash
+├── public/                 # Static public assets
+│   ├── css/                # Page-specific isolated stylesheets
+│   ├── Icons/              # Custom icons used across lists/tables
+│   ├── images/             # Content and background images
+│   └── logo.png            # Main branding logo
+├── src/
+│   ├── components/         # Reusable layouts (Navbar, Footer, GoToTop)
+│   ├── hooks/              # Custom hooks (useStylesheet for CSS isolation)
+│   ├── pages/              # Page modules (Home, Volunteer, TablePage, UserProfile, Feedback, Content pages)
+│   ├── App.jsx             # React Router structure
+│   └── main.jsx            # SPA entry script
+├── old-static-site/        # Backup folder for the original static HTML/CSS files
+├── package.json            # NPM dependencies and scripts
+└── vite.config.js          # Vite compilation config
+```
+
+---
+
+## 🛠️ Local Development Setup
+
+To run this project locally, ensure you have [Node.js](https://nodejs.org/) installed:
+
+1. **Clone the repository and enter the directory**:
+   ```bash
+   cd "Completed Web"
+   ```
+
+2. **Install all project dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the local Vite development server**:
+   ```bash
+   npm run dev
+   ```
+   Open `http://localhost:5173/` in your browser to view and interact with the application.
+
+4. **Build the production ready bundle**:
+   ```bash
+   npm run build
+   ```
+   The compiled build will be placed inside the `dist/` directory.
+
+---
+
+## ☁️ Production Deployment
+
+The project is configured to deploy at the root level:
+
+### Netlify Deployment Configuration
+Ensure the following build settings are set in your Netlify Dashboard:
+*   **Build command**: `npm run build`
+*   **Publish directory**: `dist`
