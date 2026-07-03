@@ -29,6 +29,12 @@ main {
     overflow-x: auto; /* Enable horizontal scrolling on mobile */
 }
 
+.role-table table {
+    width: 100%;
+    min-width: 650px; /* Guarantees legibility and triggers scroll container on mobile */
+    border-collapse: collapse;
+}
+
 /* Column Styling */
 .basic {
     background: #d4edda;
