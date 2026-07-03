@@ -98,9 +98,9 @@
             <div class="volunteering">
                 <h3>Volunteering Activities</h3>
                 <ul>
-                    <li>Ã°Å¸Å’Â³ Tree Planting Drives</li>
-                    <li>Ã°Å¸ÂÂ¾ Wildlife Conservation Projects</li>
-                    <li>Ã°Å¸Å’Â Community Education on Sustainability</li>
+                    <li>ðŸŒ³ Tree Planting Drives</li>
+                    <li>ðŸ¾ Wildlife Conservation Projects</li>
+                    <li>ðŸŒ Community Education on Sustainability</li>
                 </ul>
             </div>
 
@@ -109,15 +109,15 @@
                 <h3>Interests</h3>
                 <ul>
                     <li>
-                        Ã°Å¸Å’Â¿ Forest Conservation
+                        ðŸŒ¿ Forest Conservation
                         <img src="./images/userprofile/forest_conv.jpg" alt="Forest Conservation">
                     </li>
                     <li>
-                        Ã°Å¸Ââ€™ Wildlife Protection
+                        ðŸ¦ Wildlife Protection
                         <img src="./images/userprofile/wildlife_protect.jpg" alt="Wildlife Protection">
                     </li>
                     <li>
-                        Ã°Å¸Å’Â± Sustainable Agriculture
+                        ðŸŒ± Sustainable Agriculture
                         <img src="./images/userprofile/SustainableAgriculture.jpg" alt="Sustainable Agriculture">
                     </li>
                 </ul>
@@ -164,7 +164,7 @@
     </main>
 
     <!-- go to top -->
-    <button id="goToTopBtn" onclick="scrollToTop()">To Top</button>
+    <button id="goToTopBtn" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
 
     <!-- main footer section -->
 
@@ -202,6 +202,23 @@
                     <li><a href="feedback.html">Feedback</a></li>
                         </ul>
             </div>
+<div class="footer-column contact-column">
+    <h3>Contact Us</h3>
+    <ul class="contact-info">
+        <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>No. 45, Galle Road, Colombo 03, Sri Lanka</span>
+        </li>
+        <li>
+            <i class="fa-solid fa-phone"></i>
+            <span>+94 11 234 5678</span>
+        </li>
+        <li>
+            <i class="fa-solid fa-envelope"></i>
+            <span>info@greenhorizon.lk</span>
+        </li>
+    </ul>
+</div>
         </div>
                 <div class="social-icons">
             <a href="https://web.facebook.com/SustDev?_rdc=1&_rdr#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
@@ -212,11 +229,27 @@
             </div>
         </footer>
 
+<!-- Contact form handler script -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector(".contact-form form");
+        if (form) {
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                alert("Thank you! Your message to Rimaz Nowfel has been sent successfully.");
+                form.reset();
+            });
+        }
+    });
+</script>
+
 <!-- External JavaScript files-->
 <script src="./js/script.js"></script> 
 
 </body>
 </html>
+
+
 
 
 

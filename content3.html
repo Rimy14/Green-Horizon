@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,14 +12,33 @@
     <style>
         /* Header styling with background image */
        header {
-           background-image: url('./images/head.jpg');
+           background-image: url('./images/content4p2.jpeg');
            background-size: cover;
            background-position: center;
            color: rgb(255, 255, 255);
-           padding: 20px;
+           padding: 60px 20px;
            text-align: center;
-           border-radius: 5px;
-           margin-bottom: 20px;
+           border-radius: 8px;
+           margin-bottom: 30px;
+           position: relative;
+       }
+       /* Dark overlay for readability */
+       header::after {
+           content: "";
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background-color: rgba(0, 0, 0, 0.35);
+           border-radius: 8px;
+           z-index: 1;
+       }
+       header h1, header p {
+           position: relative;
+           z-index: 2;
+           color: #ffffff !important;
+           text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
        }
     </style>
 </head>
@@ -135,7 +154,7 @@
     </main>
     
     <!-- go to top -->
-    <button id="goToTopBtn" onclick="scrollToTop()">To Top</button>
+    <button id="goToTopBtn" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
 
     <!-- main footer section -->
     <footer class="footer">
@@ -172,6 +191,23 @@
                     <li><a href="feedback.html">Feedback</a></li>
                         </ul>
             </div>
+<div class="footer-column contact-column">
+    <h3>Contact Us</h3>
+    <ul class="contact-info">
+        <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>No. 45, Galle Road, Colombo 03, Sri Lanka</span>
+        </li>
+        <li>
+            <i class="fa-solid fa-phone"></i>
+            <span>+94 11 234 5678</span>
+        </li>
+        <li>
+            <i class="fa-solid fa-envelope"></i>
+            <span>info@greenhorizon.lk</span>
+        </li>
+    </ul>
+</div>
         </div>
                 <div class="social-icons">
             <a href="https://web.facebook.com/SustDev?_rdc=1&_rdr#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
@@ -187,6 +223,8 @@
 
 </body>
 </html>
+
+
 
 
 

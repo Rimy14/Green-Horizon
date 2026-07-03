@@ -149,12 +149,16 @@
                     // Prevent Form Submission if Validation Fails
                     if (!valid) {
                         event.preventDefault(); // Stop form submission
+                    } else {
+                        event.preventDefault(); // Prevent page reload
+                        alert("Thank you for your feedback! We have successfully received your response.");
+                        form.reset(); // Clear all inputs
                     }
                 });
             });
         </script>
                 <!-- go to top -->
-                <button id="goToTopBtn" onclick="scrollToTop()">To Top</button>
+                <button id="goToTopBtn" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
 
 
                 <!-- main footer section -->
@@ -193,6 +197,23 @@
                                  <li><a href="feedback.html">Feedback</a></li>
                         </ul>
                          </div>
+<div class="footer-column contact-column">
+    <h3>Contact Us</h3>
+    <ul class="contact-info">
+        <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>No. 45, Galle Road, Colombo 03, Sri Lanka</span>
+        </li>
+        <li>
+            <i class="fa-solid fa-phone"></i>
+            <span>+94 11 234 5678</span>
+        </li>
+        <li>
+            <i class="fa-solid fa-envelope"></i>
+            <span>info@greenhorizon.lk</span>
+        </li>
+    </ul>
+</div>
                      </div>
                 <div class="social-icons">
                          <a href="https://web.facebook.com/SustDev?_rdc=1&_rdr#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
@@ -208,6 +229,8 @@
          
     </body>
 </html>
+
+
 
 
 

@@ -1,22 +1,25 @@
-/* stbackground color and centering content */
+/* Background color and layout centering */
 body {
-   background: #7Fc8A9;
-    
+    background-color: #f4fbf7;
+    margin: 0;
+    padding: 0;
 }
-main{
+
+main {
     display: grid;
     place-items: center;
-    height: 100vh;
-    margin: 80px auto 0 auto;
-    margin-bottom: 700px;
-    font-family: "Poppins", sans-serif;
-
+    padding: 40px 20px;
+    margin: 100px auto 40px auto; /* Centered with top offset for navbar */
+    font-family: "Nunito Sans", sans-serif;
 }
-/* styling for main heading */
+
+/* Styling for main heading */
 h1 {
-    font-size: 50px;
+    font-size: 42px;
     text-align: center;
-    color: #fff;
+    color: #2c7a2c;
+    font-weight: 800;
+    margin-bottom: 20px;
 }
 
 /* styling for feedback container */
@@ -120,28 +123,51 @@ textarea {
 /* Submit and Reset Button Styling */
 .submit-btn,
 .reset-btn {
-    background-color: #5DB996;
     color: white;
-    padding: 10px;
+    padding: 12px 24px;
     border: none;
-    width: 150px;
-    border-radius: 5px;
+    width: 160px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
-/* hover effect */
+.submit-btn {
+    background: linear-gradient(135deg, #2c7a2c, #4ad66d);
+    box-shadow: 0 4px 12px rgba(44, 122, 44, 0.2);
+}
+
 .submit-btn:hover {
-    background-color: #3D8D7A;
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #215c21, #3cbd5b);
+    box-shadow: 0 6px 18px rgba(44, 122, 44, 0.3);
+}
+
+.reset-btn {
+    background: linear-gradient(135deg, #e05e5e, #ff8c8c);
+    box-shadow: 0 4px 12px rgba(224, 94, 94, 0.2);
 }
 
 .reset-btn:hover {
-    background-color: rgb(0, 100, 0);
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #c44747, #f76f6f);
+    box-shadow: 0 6px 18px rgba(224, 94, 94, 0.3);
 }
 
-/* Valid Input Field Styling */
-input:valid, textarea:valid, select:valid {
-    border: 2px solid green;
+.submit-btn:active, .reset-btn:active {
+    transform: translateY(0);
+}
+
+/* Form controls focus states */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #2c7a2c;
+    box-shadow: 0 0 0 3px rgba(44, 122, 44, 0.15);
 }
 
 /* Responsive Design for Small Screens */

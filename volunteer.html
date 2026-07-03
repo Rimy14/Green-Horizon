@@ -153,7 +153,7 @@
         </main>
 
         <!-- go to top button (now inside the content container) -->
-        <button id="goToTopBtn" onclick="scrollToTop()">To Top</button>
+        <button id="goToTopBtn" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
     </div>
 
     <!-- main footer section (outside the content container) -->
@@ -191,6 +191,23 @@
                         <li><a href="feedback.html">Feedback</a></li>
                         </ul>
                 </div>
+<div class="footer-column contact-column">
+    <h3>Contact Us</h3>
+    <ul class="contact-info">
+        <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>No. 45, Galle Road, Colombo 03, Sri Lanka</span>
+        </li>
+        <li>
+            <i class="fa-solid fa-phone"></i>
+            <span>+94 11 234 5678</span>
+        </li>
+        <li>
+            <i class="fa-solid fa-envelope"></i>
+            <span>info@greenhorizon.lk</span>
+        </li>
+    </ul>
+</div>
             </div>
                 <div class="social-icons">
                 <a href="https://web.facebook.com/SustDev?_rdc=1&_rdr#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
@@ -201,11 +218,55 @@
             </div>
         </footer>
         
+    <!-- Interactive emoji feedback script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const emojiButtons = document.querySelectorAll(".emoji-btn");
+            let selectedRating = null;
+
+            emojiButtons.forEach((btn, index) => {
+                btn.addEventListener("click", function () {
+                    emojiButtons.forEach(b => b.classList.remove("selected"));
+                    btn.classList.add("selected");
+                    selectedRating = index + 1;
+                });
+            });
+
+            const submitBtn = document.querySelector(".submit-btn");
+            const cancelBtn = document.querySelector(".cancel-btn");
+            const textarea = document.querySelector(".feedback-form textarea");
+
+            submitBtn.addEventListener("click", function () {
+                const text = textarea.value.trim();
+                if (!selectedRating) {
+                    alert("Please select a rating emoji before submitting.");
+                    return;
+                }
+                if (!text) {
+                    alert("Please write your review details.");
+                    return;
+                }
+                alert("Thank you for your review! Your feedback helps us improve our programs.");
+                textarea.value = "";
+                emojiButtons.forEach(b => b.classList.remove("selected"));
+                selectedRating = null;
+            });
+
+            cancelBtn.addEventListener("click", function () {
+                textarea.value = "";
+                emojiButtons.forEach(b => b.classList.remove("selected"));
+                selectedRating = null;
+            });
+        });
+    </script>
+
     <!-- External JavaScript files-->
     <script src="./js/script.js"></script> 
      
 </body>
 </html>
+
+
 
 
 

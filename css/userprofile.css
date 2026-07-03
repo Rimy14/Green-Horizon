@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #c3f5dc;
+    background-color: #f4fbf7;
     color: #333;
 }
 
@@ -55,8 +55,8 @@ main {
 
 .user-avatar p {
     margin: 0;
-    color: #777;
-    font-size: 2rem;
+    color: #666;
+    font-size: 1.15rem;
 }
 
 .profile-info, .volunteering, .interests, .calendar, .contact-form {
