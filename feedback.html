@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -28,86 +28,116 @@
             </div>  
         </nav>
     <main>
-        <h1>Feedback Form</h1>       
-        <div class="feedback-container">
-            <form>
-                <label>Enter your name:</label>
-                <input type="text"  placeholder="Enter Your name">
-                
-                <label>Enter your email:</label>
-                <input type="email"  placeholder="Enter Your email" > 
-                
-                <label>Enter your Phone Number:</label>
-                <input type="tel"  placeholder="Enter Your Phone Number" pattern="[0-9]{10}" title="Please enter a 10-digit phone number (e.g., 1234567890)">
-                
-                <label for="dob">Date of Birth:</label>
-                <input type="date" id="dob" name="dob" ><br>
-
-                <label>Enter Your Address:</label>
-                <textarea name="address" rows="3" cols="50" placeholder="Your Address" ></textarea><br>
-                
-                <label>Was this your first time visiting?</label>
-                <br>
-
-                <div class="radio-group " id="visit">
-                    <input type="radio" name="first-time" value="Yes" > Yes
-                    <input type="radio" name="first-time" value="No"> No
-                </div>
-                <br>
-                
-                <label>Was this website informative and easy to navigate through?</label>
-                <br>
-
-                <div class="radio-group" id="navigate">
-                    <input type="radio" name="informative" value="Yes" > Yes
-                    <input type="radio" name="informative" value="No"> No
-                </div>
-                <br>
-
-                <label>If "No", suggest any improvements for the future:</label>
-                <textarea rows="5" placeholder="Add your messages here..."></textarea>
-                
-                <label>How satisfied are you with our services?</label>
-                <div class="rating-container">
-                    <div class="rating-emojis">
-                        <span>ðŸ˜¡</span>
-                        <span>â˜¹ï¸</span>
-                        <span>ðŸ˜</span>
-                        <span>ðŸ˜Š</span>
-                        <span>ðŸ˜</span>
+        <div class="feedback-card">
+            <h2>Feedback Form</h2>
+            <p class="feedback-subtitle">We value your input. Please fill out this form to help us improve our services.</p>
+            
+            <form class="feedback-form-styled">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="feedback-name">Enter your name:</label>
+                        <input type="text" id="feedback-name" required placeholder="Enter your name">
                     </div>
-                    <div class="rating-options">
-                        <input type="radio" name="rating" value="1" >
-                        <input type="radio" name="rating" value="2">
-                        <input type="radio" name="rating" value="3">
-                        <input type="radio" name="rating" value="4">
-                        <input type="radio" name="rating" value="5">
-                      
+                    <div class="form-group">
+                        <label for="feedback-email">Enter your email:</label>
+                        <input type="email" id="feedback-email" required placeholder="Enter your email">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="feedback-phone">Enter your Phone Number:</label>
+                        <input type="tel" id="feedback-phone" required placeholder="Enter your phone number" pattern="[0-9]{10}" title="Please enter a 10-digit phone number (e.g., 1234567890)">
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="feedback-address">Enter Your Address:</label>
+                    <textarea id="feedback-address" name="address" rows="3" placeholder="Your Address" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Was this your first time visiting?</label>
+                    <div class="radio-group" id="visit">
+                        <label class="radio-label">
+                            <input type="radio" name="first-time" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="first-time" value="No">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Was this website informative and easy to navigate through?</label>
+                    <div class="radio-group" id="navigate">
+                        <label class="radio-label">
+                            <input type="radio" name="informative" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="informative" value="No">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="improvements">If "No", suggest any improvements for the future:</label>
+                    <textarea id="improvements" rows="3" placeholder="Add your suggestions here..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>How satisfied are you with our services?</label>
+                    <div class="rating-input-wrapper">
+                        <div class="emoji-buttons">
+                            <button class="emoji-btn" type="button" data-value="1">😞</button>
+                            <button class="emoji-btn" type="button" data-value="2">😕</button>
+                            <button class="emoji-btn" type="button" data-value="3">😐</button>
+                            <button class="emoji-btn" type="button" data-value="4">🙂</button>
+                            <button class="emoji-btn" type="button" data-value="5">😄</button>
+                        </div>
+                        <input type="hidden" name="rating" id="rating-value" required>
                     </div>
                 </div>
             
-                <label>Would you recommend our services?</label>
-                <br>
-
-                <div class="radio-group">
-                    <input type="radio" name="recommend" value="Yes" > Yes
-                    <input type="radio" name="recommend" value="No"> No
+                <div class="form-group">
+                    <label>Would you recommend our services?</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="recommend" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="recommend" value="No">
+                            <span>No</span>
+                        </label>
+                    </div>
                 </div>
-                <br>
                 
-                <label>Would you like to receive updates about the website and any offers?</label>
+                <div class="form-group">
+                    <label for="updates">Would you like to receive updates about the website and any offers?</label>
+                    <select id="updates" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="email">Yes - via Email</option>
+                        <option value="sms">Yes - via SMS</option>
+                        <option value="no">No</option> 
+                    </select>
+                </div>
                 
-                <select>
-                    <option>Yes - via Email</option>
-                    <option>Yes - via SMS</option>
-                    <option>No</option> 
-                </select>
-                
-                <label>Do you have any additional questions or requests?</label>
-                <textarea rows="5" placeholder="Add your message here..."></textarea>
+                <div class="form-group">
+                    <label for="additional-requests">Do you have any additional questions or requests?</label>
+                    <textarea id="additional-requests" rows="3" placeholder="Add your message here..."></textarea>
+                </div>
                 
                 <div class="buttons">
-                    <button type="submit" class="submit-btn">Submit</button>
+                    <button type="submit" class="submit-btn">Submit Feedback</button>
                     <button type="reset" class="reset-btn">Reset</button>
                 </div>
             </form>
@@ -117,32 +147,74 @@
         <script>
             // Wait for the DOM to fully load before executing the script
             document.addEventListener("DOMContentLoaded", function () {
-                const form = document.querySelector("form");
+                const form = document.querySelector(".feedback-form-styled");
+                const emojiButtons = document.querySelectorAll(".emoji-btn");
+                const ratingInput = document.getElementById("rating-value");
+                const radioLabels = document.querySelectorAll(".radio-label");
+
+                // Handle emoji selection
+                emojiButtons.forEach(button => {
+                    button.addEventListener("click", function () {
+                        emojiButtons.forEach(btn => btn.classList.remove("selected"));
+                        this.classList.add("selected");
+                        ratingInput.value = this.getAttribute("data-value");
+                    });
+                });
+
+                // Handle custom radio label toggle styling
+                radioLabels.forEach(label => {
+                    const input = label.querySelector("input[type='radio']");
+                    if (input) {
+                        input.addEventListener("change", function() {
+                            const name = this.name;
+                            const peers = document.querySelectorAll(`input[name='${name}']`);
+                            peers.forEach(peer => {
+                                peer.parentElement.classList.remove("selected");
+                            });
+                            if (this.checked) {
+                                this.parentElement.classList.add("selected");
+                            }
+                        });
+                    }
+                });
+
+                // Reset emoji selections and radio highlights when form is cleared
+                form.addEventListener("reset", function () {
+                    emojiButtons.forEach(btn => btn.classList.remove("selected"));
+                    ratingInput.value = "";
+                    radioLabels.forEach(label => label.classList.remove("selected"));
+                });
 
                 form.addEventListener("submit", function (event) {
                     let valid = true; // Initialize validation flag
 
                     // Name Validation (Only Letters)
-                    let nameInput = document.querySelector("input[type='text']"); // Select name input field
-                    let namePattern = /^[A-Za-z\s]+$/; // Regular expression to allow only letters and spaces
+                    const nameInput = document.getElementById("feedback-name");
+                    const namePattern = /^[A-Za-z\s]+$/; // Regular expression to allow only letters and spaces
                     if (!namePattern.test(nameInput.value.trim())) {
                         alert("Please enter a valid name (letters only).");
                         valid = false; // Set validation flag to false
                     }
 
                     // Email Validation
-                    let emailInput = document.querySelector("input[type='email']");
-                    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regular expression for email validation
+                    const emailInput = document.getElementById("feedback-email");
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regular expression for email validation
                     if (!emailPattern.test(emailInput.value.trim())) {
                         alert("Please enter a valid email.");
                         valid = false;
                     }
 
                     // Phone Number Validation (Exactly 10 Digits)
-                    let phoneInput = document.querySelector("input[type='tel']");
-                    let phonePattern = /^[0-9]{10}$/; // Regular expression to allow only 10-digit numbers
+                    const phoneInput = document.getElementById("feedback-phone");
+                    const phonePattern = /^[0-9]{10}$/; // Regular expression to allow only 10-digit numbers
                     if (!phonePattern.test(phoneInput.value.trim())) {
                         alert("Please enter a valid 10-digit phone number.");
+                        valid = false;
+                    }
+
+                    // Emoji Rating Validation
+                    if (!ratingInput.value) {
+                        alert("Please select a satisfaction rating emoji.");
                         valid = false;
                     }
 

@@ -31,7 +31,6 @@ main {
 /* Column Styling */
 .basic {
     background: #d4edda;
-    
 }
 
 .advanced {
@@ -42,8 +41,10 @@ main {
     background: #a5d6a7;
 }
 
-th {
-    color: black;
+/* Specific heading text colors for high readability */
+th.basic, th.advanced, th.ultimate {
+    color: #1a4d1a !important; /* deep forest green for high contrast */
+    font-weight: 700;
 }
 
 th img{
