@@ -251,6 +251,9 @@
     .card-container {
         grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
     }
+    .read-more {
+        opacity: 1; /* display read more on mobile/tablet screens */
+    }
 }
 
 @media (max-width: 600px) {

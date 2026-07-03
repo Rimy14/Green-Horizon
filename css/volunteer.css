@@ -489,8 +489,23 @@ p {
         justify-content: center;
     }
     
+    .feedback-section {
+        padding: 30px 16px; /* smaller card padding to maximize usable content width */
+        margin: 40px auto;
+    }
+
     .emoji-buttons {
-        justify-content: center;
+        gap: 8px;
+        padding: 8px 10px;
+        width: 100%;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+    
+    .emoji-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
     }
     
     .form-buttons {

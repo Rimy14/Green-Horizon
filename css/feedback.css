@@ -271,10 +271,11 @@ main {
 @media (max-width: 768px) {
     main {
         padding: 20px 10px;
+        margin-top: 80px; /* pull container slightly closer under the 70px nav */
     }
     
     .feedback-card {
-        padding: 30px 20px;
+        padding: 30px 16px; /* smaller card padding to maximize usable content width */
     }
 
     .form-row {
@@ -288,5 +289,19 @@ main {
     
     .submit-btn, .reset-btn {
         width: 100%;
+    }
+
+    .emoji-buttons {
+        gap: 8px;
+        padding: 8px 10px;
+        width: 100%;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+    
+    .emoji-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
     }
 }

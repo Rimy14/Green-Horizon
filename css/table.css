@@ -69,3 +69,17 @@ tbody tr:hover {
     background-color: #dcedc8;
     transition: 0.3s;
 }
+
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+        margin-top: 80px;
+    }
+    .role-table {
+        padding: 15px 10px;
+    }
+    .role-table h2 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+}

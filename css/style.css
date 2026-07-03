@@ -32,7 +32,8 @@ p{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 20px;
+    height: 70px; /* Enforce uniform height on all pages */
+    padding: 0 20px;
     margin-top: 0%;
     background: rgba(255, 255, 255, 0.85); /* Modern glass background */
     backdrop-filter: blur(12px); /* Blur effect */
@@ -40,6 +41,7 @@ p{
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     border-bottom: 1px solid rgba(0, 0, 0, 0.06); /* Divider */
     z-index: 1000;
+    box-sizing: border-box;
 }
 /* scrolling effect */
 #nav_bar {
@@ -52,19 +54,27 @@ p{
     justify-content: space-between;
     align-items: center;
     width: 90%;
+    height: 100%; /* Fill parent container height */
     margin: auto;
+    box-sizing: border-box;
 }
   
 /* Logo Styles */
 .logo  {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    height: 100%;
     margin-right: 25px;
     cursor: pointer;
+    box-sizing: border-box;
 }
   
 .logo img {
-    height: 48px;
+    height: 44px; /* Fixed logo sizing */
+    width: auto;
+    object-fit: contain;
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-sizing: border-box;
 }
 .logo img:hover{
     transform: translateY(-2px); /* Subtle hover lift */
