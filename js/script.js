@@ -1,19 +1,3 @@
-var prevScrollpos = window.scrollY; 
-
-// Navbar hiding function
-function handleNavbarScroll() {
-    var currentScrollPos = window.scrollY;
-    var navbar = document.getElementById("nav_bar");
-
-    if (prevScrollpos > currentScrollPos) {
-        navbar.style.top = "0";
-    } else {
-        navbar.style.top = "-90px";
-    }
-
-    prevScrollpos = currentScrollPos;
-}
-
 // Show/Hide "Go to Top" button function
 function handleGoToTopButton() {
     let button = document.getElementById("goToTopBtn");
@@ -26,7 +10,6 @@ function handleGoToTopButton() {
 
 // Combine both functions in a single scroll event listener
 window.addEventListener("scroll", function () {
-    handleNavbarScroll();
     handleGoToTopButton();
 });
 

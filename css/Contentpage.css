@@ -17,9 +17,6 @@ nav.contents {
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 30px;
-    position: sticky; /* Keeps nav visible while scrolling */
-    top: 50px;
-    z-index: 100;
     border: 1px solid #ddd;
 }
 
